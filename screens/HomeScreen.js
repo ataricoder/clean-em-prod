@@ -9,24 +9,12 @@ import {
 } from "react-native";
 import styled from "styled-components";
 import Card from "../components/Card";
-import { NotificationIcon } from "../components/Icons";
 import Logo from "../components/Logo";
 import Course from "../components/Course";
-import Menu from "../components/Menu";
 import { connect } from "react-redux";
-import Avatar from "../components/Avatar";
 
 function mapStateToProps(state) {
   return { action: state.action, name: state.name };
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    openMenu: () =>
-      dispatch({
-        type: "OPEN_MENU"
-      })
-  };
 }
 
 class HomeScreen extends React.Component {
@@ -43,42 +31,9 @@ class HomeScreen extends React.Component {
     StatusBar.setBarStyle("dark-content", true);
   }
 
-  componentDidUpdate() {
-    this.toggleMenu();
-  }
-
-  toggleMenu = () => {
-    if (this.props.action == "openMenu") {
-      Animated.timing(this.state.scale, {
-        toValue: 0.9,
-        duration: 300,
-        easing: Easing.in()
-      }).start();
-      Animated.spring(this.state.opacity, {
-        toValue: 0.5
-      }).start();
-
-      StatusBar.setBarStyle("light-content", true);
-    }
-
-    if (this.props.action == "closeMenu") {
-      Animated.timing(this.state.scale, {
-        toValue: 1,
-        duration: 300,
-        easing: Easing.in()
-      }).start();
-      Animated.spring(this.state.opacity, {
-        toValue: 1
-      }).start();
-
-      StatusBar.setBarStyle("dark-content", true);
-    }
-  };
-
   render() {
     return (
       <RootView>
-        <Menu />
         <AnimatedContainer
           style={{
             transform: [{ scale: this.state.scale }],
@@ -92,13 +47,10 @@ class HomeScreen extends React.Component {
                   onPress={this.props.openMenu}
                   style={{ position: "absolute", top: 0, left: 20 }}
                 >
-                  <Avatar />
+                  <Avatar source={require("../assets/avatar-2.jpg")} />
                 </TouchableOpacity>
                 <Title>Welcome Back,</Title>
-                <Name>{this.props.name}</Name>
-                <NotificationIcon
-                  style={{ position: "absolute", right: 20, top: 5 }}
-                />
+                <Name>Daniel Munoz</Name>
               </TitleBar>
               <ScrollView
                 style={{
@@ -159,10 +111,14 @@ class HomeScreen extends React.Component {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HomeScreen);
+export default connect(mapStateToProps)(HomeScreen);
+
+const Avatar = styled.Image`
+  width: 50px;
+  height: 50px;
+  background: black;
+  border-radius: 25px;
+`;
 
 const RootView = styled.View`
   background: black;

@@ -27,7 +27,7 @@ HomeStack.navigationOptions = ({ navigation }) => {
 
   return {
     tabBarVisible,
-    tabBarLabel: "Home"
+    tabBarLabel: "Dashboard"
   };
 };
 
@@ -36,7 +36,7 @@ const CoursesStack = createStackNavigator({
 });
 
 CoursesStack.navigationOptions = {
-  tabBarLabel: "Courses"
+  tabBarLabel: "Cleanings"
 };
 
 const ProjectsStack = createStackNavigator({
@@ -44,7 +44,7 @@ const ProjectsStack = createStackNavigator({
 });
 
 ProjectsStack.navigationOptions = {
-  tabBarLabel: "Projects"
+  tabBarLabel: "Account"
 };
 
 const TabNavigator = createBottomTabNavigator({

@@ -35,6 +35,7 @@ npm manifest:
       "react-native-web": "^0.11.4",
       "react-navigation": "^4.0.0",
       "react-navigation-stack": "^1.5.1",
+      "react-navigation-tabs": "^2.4.0",
       "react-redux": "^7.1.1",
       "redux": "^4.0.4",
       "styled-components": "^4.3.2"
@@ -3735,6 +3736,10 @@ Lockfile:
     version "16.9.0"
     resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   
+  react-lifecycles-compat@^3.0.4:
+    version "3.0.4"
+    resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
+  
   react-native-branch@~3.0.1:
     version "3.0.1"
     resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-3.0.1.tgz#5b07b61cbd290168cd3c3662e017ebe0f356d2ca"
@@ -3770,6 +3775,10 @@ Lockfile:
   react-native-svg@^9.6.4:
     version "9.8.4"
     resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-9.8.4.tgz#6fd28198ae991b30cfbea10bb445b55870f0457c"
+  
+  react-native-tab-view@^2.9.0:
+    version "2.10.0"
+    resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-2.10.0.tgz#5e249e5650502010013449ffd4e5edc18a95364b"
   
   react-native-view-shot@2.6.0:
     version "2.6.0"
@@ -3850,6 +3859,14 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-1.5.1.tgz#8a8c0cd0b8498225f4e8e564f06043849961bede"
     dependencies:
       prop-types "^15.7.2"
+  
+  react-navigation-tabs@^2.4.0:
+    version "2.4.0"
+    resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.4.0.tgz#2d4e814bc8b82febf422e822f1fabe3a46f3d9a5"
+    dependencies:
+      hoist-non-react-statics "^3.3.0"
+      react-lifecycles-compat "^3.0.4"
+      react-native-tab-view "^2.9.0"
   
   react-navigation@^4.0.0:
     version "4.0.0"

@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Course = props => (
   <Container>
     <Content>
-      <Avatar source={props.avatar} />
       <Caption>{props.caption}</Caption>
       <Author2>{props.author2}</Author2>
       <Author3>{props.author3}</Author3>
@@ -25,18 +24,9 @@ const Container = styled.View`
 `;
 
 const Content = styled.View`
-  padding-left: 75px;
+  padding-left: 20px;
   justify-content: center;
   height: 120px;
-`;
-
-const Avatar = styled.Image`
-  width: 46px;
-  height: 46px;
-  position: absolute;
-  top: 38px;
-  left: 15px;
-  border-radius: 23px;
 `;
 
 const Caption = styled.Text`

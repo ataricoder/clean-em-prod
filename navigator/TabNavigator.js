@@ -6,6 +6,10 @@ import HomeScreen from "../screens/HomeScreen";
 import SectionScreen from "../screens/SectionScreen";
 import CoursesScreen from "../screens/CoursesScreen";
 import ProjectsScreen from "../screens/ProjectsScreen";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faList } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -22,7 +26,8 @@ HomeStack.navigationOptions = ({ navigation }) => {
 
   return {
     tabBarVisible,
-    tabBarLabel: "Dashboard"
+    tabBarLabel: "Dashboard",
+    tabBarIcon: <FontAwesomeIcon icon={faList} color={"#4775f2"} size={20} />
   };
 };
 
@@ -31,7 +36,8 @@ const CoursesStack = createStackNavigator({
 });
 
 CoursesStack.navigationOptions = {
-  tabBarLabel: "Bookings"
+  tabBarLabel: "New Booking",
+  tabBarIcon: <FontAwesomeIcon icon={faPlus} color={"#b8bece"} size={20} />
 };
 
 const ProjectsStack = createStackNavigator({
@@ -39,7 +45,8 @@ const ProjectsStack = createStackNavigator({
 });
 
 ProjectsStack.navigationOptions = {
-  tabBarLabel: "Account"
+  tabBarLabel: "Account",
+  tabBarIcon: <FontAwesomeIcon icon={faUser} color={"#b8bece"} size={20} />
 };
 
 const TabNavigator = createBottomTabNavigator({

@@ -8,8 +8,6 @@ import {
   StatusBar
 } from "react-native";
 import styled from "styled-components";
-import Card from "../components/Card";
-import Logo from "../components/Logo";
 import Course from "../components/Course";
 import { connect } from "react-redux";
 
@@ -65,7 +63,6 @@ class HomeScreen extends React.Component {
                     author={course.author}
                     author2={course.author2}
                     author3={course.author3}
-                    avatar={course.avatar}
                     caption={course.caption}
                   />
                 </TouchableOpacity>
@@ -129,29 +126,25 @@ const Subtitle = styled.Text`
 
 const courses = [
   {
-    author: "2100 Rio Grande St, Austin, TX 78705   Apt 319",
-    avatar: require("../assets/avatar.jpg"),
+    author: "2100 Rio Grande St, Austin, TX 78705. Apt 319",
     caption: "Monday, September 9",
     author2: "Home Cleaning",
     author3: "1 Bed/1 Bath"
   },
   {
-    author: "701 Brazos St, Austin, TX 78701          Floor 16",
-    avatar: require("../assets/avatar.jpg"),
+    author: "701 Brazos St, Austin, TX 78701. Floor 16",
     caption: "Thursday, September 12",
     author2: "Office Cleaning",
     author3: "2000 Square Feet"
   },
   {
-    author: "2100 Rio Grande St, Austin, TX 78705   Apt 319",
-    avatar: require("../assets/avatar.jpg"),
+    author: "2100 Rio Grande St, Austin, TX 78705. Apt 319",
     caption: "Friday, September 13",
     author2: "Deep Cleaning",
     author3: "3 Bed/3 Bath"
   },
   {
-    author: "2100 Rio Grande St, Austin, TX 78705   Apt 319",
-    avatar: require("../assets/avatar.jpg"),
+    author: "2100 Rio Grande St, Austin, TX 78705. Apt 319",
     caption: "Monday, September 16",
     author2: "Home Cleaning - 1 Bed/1 Bath",
     author3: "1 Bed/1 Bath"

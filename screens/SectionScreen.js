@@ -3,9 +3,7 @@ import styled from "styled-components";
 import { Button } from "react-native";
 
 class SectionScreen extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
+  static navigationOptions = {};
 
   render() {
     return (

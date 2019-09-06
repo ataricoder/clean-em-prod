@@ -7,15 +7,10 @@ import SectionScreen from "../screens/SectionScreen";
 import CoursesScreen from "../screens/CoursesScreen";
 import ProjectsScreen from "../screens/ProjectsScreen";
 
-const HomeStack = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Section: SectionScreen
-  },
-  {
-    mode: "modal"
-  }
-);
+const HomeStack = createStackNavigator({
+  Home: HomeScreen,
+  Section: SectionScreen
+});
 
 HomeStack.navigationOptions = ({ navigation }) => {
   var tabBarVisible = true;
@@ -36,7 +31,7 @@ const CoursesStack = createStackNavigator({
 });
 
 CoursesStack.navigationOptions = {
-  tabBarLabel: "Cleanings"
+  tabBarLabel: "Bookings"
 };
 
 const ProjectsStack = createStackNavigator({

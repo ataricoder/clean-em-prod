@@ -1,28 +1,22 @@
 {
   "expo": {
-    "name": "Design+Code",
-    "slug": "designcode-app",
+    "name": "Clean 'Em",
+    "slug": "clean-em-prod",
     "privacy": "public",
     "sdkVersion": "34.0.0",
-    "platforms": [
-      "ios",
-      "android",
-      "web"
-    ],
+    "platforms": ["ios", "android", "web"],
     "version": "1.0.0",
     "orientation": "default",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/clean-em-icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/launch.png",
       "resizeMode": "contain",
-      "backgroundColor": "#f0f3f5"
+      "backgroundColor": "#4abbed"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     }

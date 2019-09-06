@@ -86,3 +86,12 @@ You can also download the Expo Client app on a physical device for viewing your 
 
 I couldnt get the Ionicons to work, might have to survive with another library or local svg icons
 Look at Screens and Navigation at min 18
+
+---
+
+## First Run - @riegelc
+
+1. Clone the project, download it locally, put it somewhere where you remember
+2. CD into the project, run npm install in it
+3. Run `expo start` to run local server
+4. Show iOS and Android Emulators in meeting
